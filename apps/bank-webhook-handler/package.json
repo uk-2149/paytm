@@ -1,5 +1,5 @@
 {
-  "name": "@uk/db",
+  "name": "bank-webhook-handler",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,14 +9,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
+  "type": "commonjs",
   "dependencies": {
-    "@prisma/client": "^6.12.0"
-  },
-  "exports": {
-    "./client": "./src/index.ts"
-  },
-  "devDependencies": {
-    "prisma": "^6.12.0"
+    "@uk/db": "*",
+    "@types/express": "^5.0.3",
+    "esbuild": "^0.25.6",
+    "express": "^5.1.0"
   }
 }

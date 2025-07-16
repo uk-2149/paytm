@@ -1,5 +1,5 @@
 {
-  "name": "@uk/db",
+  "name": "@uk/store",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,14 +9,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
+  "type": "commonjs",
   "dependencies": {
-    "@prisma/client": "^6.12.0"
+    "recoil": "^0.7.7"
   },
   "exports": {
-    "./client": "./src/index.ts"
-  },
-  "devDependencies": {
-    "prisma": "^6.12.0"
+    "./useBalance": "./src/hooks/useBalance.ts"
   }
 }
