@@ -1,7 +1,19 @@
-import { useRecoilValue } from "recoil";
-import { balanceAtom } from "../atoms/balance";
+"use client"
+
+import { useBalance as useBalanceStore } from "../stores/balance";
 
 export const useBalance = () => {
-    const value = useRecoilValue(balanceAtom);
-    return value;
+    const balance = useBalanceStore((state) => state.balance);
+    return balance;
+}
+
+export const useBalanceActions = () => {
+    const { setBalance, increment, decrement, reset } = useBalanceStore((state) => ({
+        setBalance: state.setBalance,
+        increment: state.increment,
+        decrement: state.decrement,
+        reset: state.reset
+    }));
+    
+    return { setBalance, increment, decrement, reset };
 }
